@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@base": "http://katausten.com/",
+    "@vocab": "http://katausten.com/",
+    "homepage": { "@type": "@id" },
+    "projects": { "@type": "@id" },
+    "posts": { "@type": "@id" }
+  },
+  "@id": "#me",
+  "name": "Kat Austen",
+  "homepage": "http://katausten.com/",
+  "posts": [ { /*... some posts ...*/ } ],
+  "projects": [ 
+    {
+      "@id": "projects/open-dropet",
+      "name": "Open Droplet",
+      "posts": [ 
+        {
+          "@id": "#posts/2015-05-04-title",
+          "name": "The post's title",
+          "content": "The post's content, blah. blah.</br> blah..."
+        } , {
+          "@id": "#2015-05-03-another-title",
+          "name": "The other post's title",
+          "content": "The other post's content, blah. blah.</br> blah..."
+        } 
+      ],
+      "tags": [ "#about-this" , "#and-that" ]
+    }, 
+    {
+      "@id": "#projects/flows",
+      "name": "Flows"
+    }, {
+      "@id": "#projects/not-waving",
+      "name": "Not Waving"
+    }
+  ],
+  "about": {
+    "@id": "#about",
+    "name": "About me",
+    "me" : "#me"
+  }
+}
