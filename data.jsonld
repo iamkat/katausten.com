@@ -9,7 +9,11 @@
   "@id": "#me",
   "name": "Kat Austen",
   "homepage": "http://katausten.com/",
-  "posts": [ { /*... some posts ...*/ } ],
+  "posts": [ {
+    "@id": "#2015-05-02-a-blog-title",
+    "name": "The blog post's title",
+    "content": "The blog post's content, blah. blah.</br> blah..."
+  } ],
   "projects": [ 
     {
       "@id": "projects/open-dropet",
