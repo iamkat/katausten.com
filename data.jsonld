@@ -3,8 +3,8 @@
     "@base": "http://katausten.com/",
     "@vocab": "http://katausten.com/",
     "homepage": { "@type": "@id" },
-    "projects": { "@type": "@id" },
-    "posts": { "@type": "@id" }
+    "projects": { "@type": "@link" },
+    "posts": { "@type": "@link" }
   },
   "@id": "#me",
   "name": "Kat Austen",
