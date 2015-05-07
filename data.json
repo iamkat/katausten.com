@@ -16,215 +16,41 @@
     },
     {
       "@id": "#2015-05-02-a-blog-title",
-      "name": "The blog post's title",
+      "@type": "posts",
       "content": "The blog post's content, blah. blah.</br> blah...",
-      "@type": "posts"
+      "name": "The blog post's title"
     },
     {
       "@id": "projects/open-dropet",
+      "@type": "projects",
       "name": "Open Droplet",
-      "posts": [
-        {
-          "@id": "#posts/2015-05-04-title",
-          "name": "The post's title",
-          "content": "The post's content, blah. blah.</br> blah..."
-        },
-        {
-          "@id": "#2015-05-03-another-title",
-          "name": "The other post's title",
-          "content": "The other post's content, blah. blah.</br> blah..."
-        }
-      ],
       "tags": [
         "#about-this",
         "#and-that"
-      ],
-      "@type": "posts"
+      ]
     },
     {
       "@id": "#projects/flows",
-      "name": "Flows",
-      "@type": "posts"
+      "@type": "projects",
+      "name": "Flows"
     },
     {
       "@id": "#projects/not-waving",
-      "name": "Not Waving",
-      "@type": "posts"
+      "@type": "projects",
+      "name": "Not Waving"
+    },
+    {
+      "@id": "#posts/2015-05-04-title",
+      "@type": "posts",
+      "content": "The post's content, blah. blah.</br> blah...",
+      "name": "The post's title"
+    },
+    {
+      "@id": "#2015-05-03-another-title",
+      "@type": "posts",
+      "content": "The other post's content, blah. blah.</br> blah...",
+      "name": "The other post's title"
     }
   ],
-  "edges": {
-    "@context": {
-      "@base": "http://katausten.com/",
-      "@vocab": "http://katausten.com/",
-      "homepage": {
-        "@type": "@id"
-      },
-      "projects": {
-        "@type": "@link"
-      },
-      "posts": {
-        "@type": "@link"
-      }
-    },
-    "@id": "#me",
-    "name": "Kat Austen",
-    "homepage": "http://katausten.com/",
-    "posts": [
-      {
-        "@id": "#2015-05-02-a-blog-title",
-        "name": "The blog post's title",
-        "content": "The blog post's content, blah. blah.</br> blah..."
-      }
-    ],
-    "projects": [
-      {
-        "@id": "projects/open-dropet",
-        "name": "Open Droplet",
-        "posts": [
-          {
-            "@id": "#posts/2015-05-04-title",
-            "name": "The post's title",
-            "content": "The post's content, blah. blah.</br> blah..."
-          },
-          {
-            "@id": "#2015-05-03-another-title",
-            "name": "The other post's title",
-            "content": "The other post's content, blah. blah.</br> blah..."
-          }
-        ],
-        "tags": [
-          "#about-this",
-          "#and-that"
-        ]
-      },
-      {
-        "@id": "#projects/flows",
-        "name": "Flows"
-      },
-      {
-        "@id": "#projects/not-waving",
-        "name": "Not Waving"
-      }
-    ],
-    "about": {
-      "@id": "#about",
-      "name": "About me",
-      "me": "#me"
-    }
-  }
-}
-{
-  "links": [
-    "posts",
-    "projects"
-  ],
-  "nodes": [
-    {
-      "@id": "#me",
-      "about": {
-        "@id": "#about",
-        "name": "About me",
-        "me": "#me"
-      },
-      "homepage": "http://katausten.com/",
-      "name": "Kat Austen"
-    },
-    {
-      "@id": "#2015-05-02-a-blog-title",
-      "name": "The blog post's title",
-      "content": "The blog post's content, blah. blah.</br> blah...",
-      "@type": "projects"
-    },
-    {
-      "@id": "projects/open-dropet",
-      "name": "Open Droplet",
-      "posts": [
-        {
-          "@id": "#posts/2015-05-04-title",
-          "name": "The post's title",
-          "content": "The post's content, blah. blah.</br> blah..."
-        },
-        {
-          "@id": "#2015-05-03-another-title",
-          "name": "The other post's title",
-          "content": "The other post's content, blah. blah.</br> blah..."
-        }
-      ],
-      "tags": [
-        "#about-this",
-        "#and-that"
-      ],
-      "@type": "projects"
-    },
-    {
-      "@id": "#projects/flows",
-      "name": "Flows",
-      "@type": "projects"
-    },
-    {
-      "@id": "#projects/not-waving",
-      "name": "Not Waving",
-      "@type": "projects"
-    }
-  ],
-  "edges": {
-    "@context": {
-      "@base": "http://katausten.com/",
-      "@vocab": "http://katausten.com/",
-      "homepage": {
-        "@type": "@id"
-      },
-      "projects": {
-        "@type": "@link"
-      },
-      "posts": {
-        "@type": "@link"
-      }
-    },
-    "@id": "#me",
-    "name": "Kat Austen",
-    "homepage": "http://katausten.com/",
-    "posts": [
-      {
-        "@id": "#2015-05-02-a-blog-title",
-        "name": "The blog post's title",
-        "content": "The blog post's content, blah. blah.</br> blah..."
-      }
-    ],
-    "projects": [
-      {
-        "@id": "projects/open-dropet",
-        "name": "Open Droplet",
-        "posts": [
-          {
-            "@id": "#posts/2015-05-04-title",
-            "name": "The post's title",
-            "content": "The post's content, blah. blah.</br> blah..."
-          },
-          {
-            "@id": "#2015-05-03-another-title",
-            "name": "The other post's title",
-            "content": "The other post's content, blah. blah.</br> blah..."
-          }
-        ],
-        "tags": [
-          "#about-this",
-          "#and-that"
-        ]
-      },
-      {
-        "@id": "#projects/flows",
-        "name": "Flows"
-      },
-      {
-        "@id": "#projects/not-waving",
-        "name": "Not Waving"
-      }
-    ],
-    "about": {
-      "@id": "#about",
-      "name": "About me",
-      "me": "#me"
-    }
-  }
+  "edges": {}
 }
