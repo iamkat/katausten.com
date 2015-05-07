@@ -8,6 +8,7 @@
   },
   "@id": "#me",
   "name": "Kat Austen",
+  "type": "root", 
   "homepage": "http://katausten.com/",
   "posts": [ {
     "@id": "#2015-05-02-a-blog-title",
@@ -16,7 +17,7 @@
   } ],
   "projects": [ 
     {
-      "@id": "projects/open-dropet",
+      "@id": "#projects/open-droplet",
       "name": "Open Droplet",
       "posts": [ 
         {

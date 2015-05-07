@@ -11,7 +11,8 @@
               | $links 
               | contains($keys) 
               | not )) 
-  | from_entries as $root 
+  | from_entries
+  | with_entries(.key |= ( if . == "@id" then "id" else . end )) as $root 
 | $all
   | del(.["@context"]) 
   | [ .. 
@@ -35,6 +36,7 @@
                 | contains($keys) 
                 | not )) 
     | from_entries 
+    | with_entries(.key |= ( if . == "@id" then "id" else . end ))
     ] as $nodes 
 | ( [ $root ] + $nodes ) as $nodes
 | [ $all
@@ -52,14 +54,16 @@
               | [ $link ] 
               | contains($keys)))
   | [ .[].value[]
-    | { source   : $id
-      , relation : $link
-      , target   : .["@id"]
+    | { source   : ( [ $nodes[] | .id ]| index($id) )
+      , type : $link
+      , target   : ( .["@id"] as $target | [ $nodes[] | .id ]| index($target) )
       } ]
   ] | map(select(length !=0)) 
     | reduce .[] as $item ( [] 
                           ; . + $item )
     | . as $edges 
-| { nodes: $nodes
-  , edges: $edges 
+| { directed: "true"
+  , graph: []
+  , nodes: $nodes
+  , links: $edges 
   }

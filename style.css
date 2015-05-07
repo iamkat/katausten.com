@@ -1,0 +1,54 @@
+circle.node {
+  stroke: #fff;
+  cursor: pointer;
+}
+
+body {
+	background: hsl(35, 38%, 70%);
+	overflow: hidden;
+}
+
+#title { position: absolute; left: 300px; right:300px; bottom: 40px; font-family: Helvetica Neue; font-weight: 100; letter-spacing: 2px; font-size: 26px; text-transform: uppercase; margin: 0; text-align: center; background: rgba(208, 183, 149, 0.5)!important; z-index: 500;}
+
+line.link {
+  stroke-opacity: .8;
+}
+
+#links {
+	font-family: Helvetica Neue;
+	font-weight: 300;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+#search {
+	padding: 5px; width: 200px; position:relative; left:-2px; margin: 10px 0 0px;
+	opacity: .5;
+}
+
+#search:focus { opacity: 1; }
+
+#links ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 15px;
+}
+
+#links a { color: #000; opacity: .5; text-decoration: none; }
+#links a:hover { color: #000; opacity: 1; text-decoration: none; }
+
+#legend {
+	position: absolute; bottom:20px; right:20px;
+	font-family: Helvetica Neue;
+	font-weight: 300;
+	font-size: 16px;
+}
+#legend div { padding-bottom: 2px; float: left; margin-right: 1em;}
+#legend .projects { border-bottom: 3px solid #e64; }
+#legend .posts { border-bottom: 3px solid #4be; }
+#legend .something { border-bottom: 3px solid #8eb; }
+#legend .something_else { border-bottom: 3px solid #eb4; }
