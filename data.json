@@ -1,8 +1,4 @@
 {
-  "links": [
-    "posts",
-    "projects"
-  ],
   "nodes": [
     {
       "@id": "#me",
@@ -16,41 +12,72 @@
     },
     {
       "@id": "#2015-05-02-a-blog-title",
-      "@type": "posts",
       "content": "The blog post's content, blah. blah.</br> blah...",
-      "name": "The blog post's title"
+      "name": "The blog post's title",
+      "type": "posts"
     },
     {
       "@id": "projects/open-dropet",
-      "@type": "projects",
       "name": "Open Droplet",
       "tags": [
         "#about-this",
         "#and-that"
-      ]
+      ],
+      "type": "projects"
     },
     {
       "@id": "#projects/flows",
-      "@type": "projects",
-      "name": "Flows"
+      "name": "Flows",
+      "type": "projects"
     },
     {
       "@id": "#projects/not-waving",
-      "@type": "projects",
-      "name": "Not Waving"
+      "name": "Not Waving",
+      "type": "projects"
     },
     {
       "@id": "#posts/2015-05-04-title",
-      "@type": "posts",
       "content": "The post's content, blah. blah.</br> blah...",
-      "name": "The post's title"
+      "name": "The post's title",
+      "type": "posts"
     },
     {
       "@id": "#2015-05-03-another-title",
-      "@type": "posts",
       "content": "The other post's content, blah. blah.</br> blah...",
-      "name": "The other post's title"
+      "name": "The other post's title",
+      "type": "posts"
     }
   ],
-  "edges": {}
+  "edges": [
+    {
+      "source": "#me",
+      "relation": "posts",
+      "target": "#2015-05-02-a-blog-title"
+    },
+    {
+      "source": "#me",
+      "relation": "projects",
+      "target": "projects/open-dropet"
+    },
+    {
+      "source": "#me",
+      "relation": "projects",
+      "target": "#projects/flows"
+    },
+    {
+      "source": "#me",
+      "relation": "projects",
+      "target": "#projects/not-waving"
+    },
+    {
+      "source": "projects/open-dropet",
+      "relation": "posts",
+      "target": "#posts/2015-05-04-title"
+    },
+    {
+      "source": "projects/open-dropet",
+      "relation": "posts",
+      "target": "#2015-05-03-another-title"
+    }
+  ]
 }

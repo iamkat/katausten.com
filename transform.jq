@@ -22,20 +22,44 @@
                 | contains($keys)))
     | reduce .[] as $item ( []
                           ; . + ( [ $item.value[] 
-                                  | {"@type": $item.key } + . 
+                                  | {"type": $item.key } + . 
                                   ] ) )   
     ] | reduce .[] as $item ( [] 
                             ; . + $item )
       |  . as $nodes
-| $nodes | [ .[]
+| $nodes 
+  | [ .[]
+    | to_entries 
+    | map(select( [.key] as $keys 
+                | $links 
+                | contains($keys) 
+                | not )) 
+    | from_entries 
+    ] as $nodes 
+| ( [ $root ] + $nodes ) as $nodes
+| [ $all
+  | del(.["@context"])
+  | ..
+  | .["@id"]? as $id
+  | $links[]
+  | . as $link
+  | $all
+  | ..
+  | objects
+  | select(.["@id"] == $id)
   | to_entries 
   | map(select( [.key] as $keys 
-              | $links 
-              | contains($keys) 
-              | not )) 
-  | from_entries ] as $nodes 
-| {} as $edges 
-| { links: $links
-  , nodes: ( [ $root ] + $nodes ) 
+              | [ $link ] 
+              | contains($keys)))
+  | [ .[].value[]
+    | { source   : $id
+      , relation : $link
+      , target   : .["@id"]
+      } ]
+  ] | map(select(length !=0)) 
+    | reduce .[] as $item ( [] 
+                          ; . + $item )
+    | . as $edges 
+| { nodes: $nodes
   , edges: $edges 
   }
