@@ -1,2 +1,2 @@
 #!/bin/bash
-cat data.jsonld | jq ' . as $all | ..|.["@type"] | select(. == "@link") as $links |  $all | .["@context"] as $context |  del(.["@context"]) | del(.projects) as $nodes | $all as $edges | { links: $links, nodes: $nodes , edges: $edges }'
+cat data.jsonld | jq -f transform.jq
