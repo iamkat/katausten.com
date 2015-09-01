@@ -8,6 +8,10 @@ body {
 	overflow: hidden;
 }
 
+.wrapper {
+	max-width:500px;
+}
+
 #title { 
 	color: #FA0000; 
 	font-family: 'Rationale', monospace; 
@@ -65,7 +69,7 @@ div#legend {
 div.project {
 	position: absolute; 
 	top:90px;
-    width:580px;
+    //width:580px;
     right:25%;
     left:50%;
     margin-left:-158px;
@@ -74,4 +78,16 @@ div.project {
 
 .project img {
 	margin: 0 8px 3px;
+}
+
+@media only screen 
+and (min-device-width : 315px) 
+and (max-device-width : 667px) { 
+   div#legend {
+ 	 bottom: 18%; 
+     margin-left:-58px;
+   }
+   div.project {
+     margin-left:-158px;
+   }
 }
