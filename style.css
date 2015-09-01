@@ -84,7 +84,7 @@ div.project {
 and (min-device-width : 315px) 
 and (max-device-width : 667px) { 
    div#legend {
- 	 bottom: 18%; 
+ 	 bottom: 25%; 
      margin-left:-58px;
    }
    div.project {
