@@ -23,10 +23,10 @@ $.domReady(function() {
 			return d.type == 'root' ? 1.6 :1;
 		},
 		fill = function(d) { 
+			if (d.type == "thought") return "#8db";
 			if (d.type == "projects") return "#e64";
 			if (d.type == "posts") return "#4be";
-			if (d.type == "something") return "#8db";
-			if (d.type == "something_else") return "#eb4";
+			if (d.type == "something") return "#eb4";
 			if (d.type == "root") return '#222';
 			if (d.root) return 'hsl(35,30%,'+(50-50*d.share)+'%)';
 			return "hsl(35,40%,70%)";

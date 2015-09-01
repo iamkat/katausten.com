@@ -5,16 +5,24 @@
     "homepage": { "@type": "@id" },
     "projects": { "@type": "@link" },
     "posts": { "@type": "@link" }
+    "thought": { "@type": "@link" }
   },
   "@id": "#me",
   "name": "Kat Austen",
   "type": "root", 
   "homepage": "http://katausten.com/",
-  "posts": [ {
-    "@id": "#2015-05-02-a-blog-title",
-    "name": "The blog post's title",
+  "thought": [ {
+    "@id": "#creativeoutput",
+    "name": "creation",
     "content": "The blog post's content, blah. blah.</br> blah..."
   } ],
+  "thought": [ {
+    "@id": "#observationoutput",
+    "name": "observation",
+    "content": "The blog post's content, blah. blah.</br> blah..."
+  } ],
+  
+
   "projects": [ 
     {
       "@id": "#projects/open-droplet",
@@ -35,7 +43,12 @@
     {
       "@id": "#projects/flows",
       "name": "Flows"
-    }, {
+    },
+
+      "@id": "#projects/TMT",
+      "name": "TMT"
+    },
+    {
       "@id": "#projects/not-waving",
       "name": "Not Waving"
     }

@@ -14,10 +14,16 @@
       "type": "root"
     },
     {
-      "id": "#2015-05-02-a-blog-title",
+      "id": "#creativeoutput",
       "content": "The blog post's content, blah. blah.</br> blah...",
-      "name": "The blog post's title",
-      "type": "posts"
+      "name": "things",
+      "type": "thought"
+    },
+    {
+      "id": "#observationoutput",
+      "content": "The blog post's content, blah. blah.</br> blah...",
+      "name": "thoughts",
+      "type": "thought"
     },
     {
       "id": "#projects/open-droplet",
